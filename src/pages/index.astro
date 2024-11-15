@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Network from '../components/Network.astro';
+import PromoVideo from '../components/PromoVideo.astro';
+import Pricing from '../components/Pricing.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Stats from '../components/Stats.astro';
+import UploadForm from '../components/UploadForm.jsx';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Digital Signage Advertising">
+  <main>
+    <Hero />
+    <Services />
+    <Network />
+    <PromoVideo />
+    <Pricing />
+    <Testimonials />
+    <Stats />
+    <UploadForm client:load />
+    <WhatsAppButton />
+  </main>
+  <Footer />
+</Layout>
