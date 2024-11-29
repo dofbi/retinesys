@@ -1,37 +1,43 @@
 ---
 const plans = [
   {
-    name: "Starter",
-    price: "999",
-    features: ["5 Locations", "7 Days", "Basic Analytics"]
+    name: "Essentiel",
+    price: "75 000",
+    promo: "40 000",
+    features: ["1 Emplacements", "24h/24h, 7 Jours", "Analyses de base"]
   },
   {
-    name: "Professional",
-    price: "2499",
-    features: ["15 Locations", "14 Days", "Advanced Analytics"]
+    name: "Professionnel",
+    price: "",
+    features: ["15 Emplacements", "24h/24h, 14 Jours", "Analyses de base"]
   },
   {
-    name: "Enterprise",
-    price: "4999",
-    features: ["Unlimited Locations", "30 Days", "Premium Support"]
+    name: "Entreprise",
+    price: "",
+    features: ["38 Emplacements", "24h/24h, 30 Jours", "Support premium"]
   }
 ];
 ---
 <section class="py-20 bg-gray-50">
   <div class="container mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center mb-16">Pricing Plans</h2>
+    <h2 class="text-4xl font-bold text-center mb-16">Choisissez l'offre qui vous convient</h2>
     <div class="grid md:grid-cols-3 gap-8">
       {plans.map(plan => (
         <div class="bg-white p-8 rounded-lg shadow-lg text-center">
           <h3 class="text-2xl font-semibold mb-4">{plan.name}</h3>
-          <p class="text-4xl font-bold mb-6">${plan.price}</p>
+          {plan.promo ? (
+            <p class="text-4xl font-bold">{plan.promo} cfa</p>
+            <p class="text-2xl font-bold text-red-500 line-through">{plan.price} cfa</p>
+          ) : (
+            <p class="text-4xl font-bold mb-6">{plan.price ? `${plan.price} cfa` : 'Demande de Devis'}</p>
+          )}
           <ul class="space-y-4 mb-8">
             {plan.features.map(feature => (
               <li>{feature}</li>
             ))}
           </ul>
           <a href="#upload" class="block bg-primary text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors">
-            Get Started
+            Souscrire à ce plan
           </a>
         </div>
       ))}

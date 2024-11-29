@@ -1,34 +1,36 @@
 ---
+import { Image } from 'astro:assets';
 ---
 <section class="py-20" id="network">
   <div class="container mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center mb-16">Our Network</h2>
+    <h2 class="text-4xl font-bold text-center mb-16">Notre Réseau</h2>
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <h3 class="text-3xl font-semibold mb-6">Nationwide Coverage</h3>
+        <h3 class="text-3xl font-semibold mb-6">Un réseau puissant et diversifié</h3>
         <p class="text-gray-600 mb-6">
-          Access premium advertising spaces across major cities and high-traffic locations.
+          Rétine met à votre disposition un réseau d'écrans de télévision stratégiquement positionnés dans les lieux les plus fréquentés de Dakar et Mbour. Ce dispositif garantit une audience variée et une visibilité inégalée pour votre entreprise.
         </p>
         <ul class="space-y-4">
           <li class="flex items-center">
             <span class="text-primary mr-2">✓</span>
-            Shopping Centers
+            Club Olympique (4 TV) : Une des plus grandes salles de sport du Sénégal.
           </li>
           <li class="flex items-center">
             <span class="text-primary mr-2">✓</span>
-            Transit Hubs
+            Elite Fitness Kébé (4 TV) : Un espace dédié aux sportifs.
           </li>
           <li class="flex items-center">
             <span class="text-primary mr-2">✓</span>
-            Business Districts
+            La Brioche Dorée (30 TV) : Présent dans le plus grand réseau de restauration du Sénégal.
           </li>
         </ul>
       </div>
       <div class="rounded-lg overflow-hidden">
-        <img 
+        <Image 
           src="https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&q=80"
           alt="Digital signage network"
           class="w-full h-96 object-cover"
+          width="720" height="384"
         />
       </div>
     </div>

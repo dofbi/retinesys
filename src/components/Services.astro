@@ -1,18 +1,19 @@
 ---
+import { Image } from 'astro:assets';
 const services = [
   {
-    title: "Premium Locations",
-    description: "Strategic placement in high-traffic areas",
+    title: "Écrans d'affichage dynamiques",
+    description: "Diffusez vos messages publicitaires sur des écrans haute résolution placés dans des lieux stratégiques à fort trafic. Nos écrans garantissent une visibilité maximale pour un impact immédiat.",
     image: "https://images.unsplash.com/photo-1517292987719-0369a794ec0f?auto=format&fit=crop&q=80"
   },
   {
-    title: "Targeted Reach",
-    description: "Connect with your ideal audience",
+    title: "Gestion de campagnes publicitaires",
+    description: "De la planification à la diffusion, nous gérons entièrement vos campagnes publicitaires. Profitez d’un accompagnement clé en main pour maximiser votre retour sur investissement.",
     image: "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80"
   },
   {
-    title: "Real-time Analytics",
-    description: "Track campaign performance live",
+    title: "Flexibilité et réactivité",
+    description: "Adaptez vos contenus publicitaires selon vos besoins. Nos écrans permettent des mises à jour hebdomadaires ou en cas d’urgence pour garantir une communication toujours pertinente.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80"
   }
 ];
@@ -23,10 +24,11 @@ const services = [
     <div class="grid md:grid-cols-3 gap-12">
       {services.map(service => (
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <img 
+          <Image 
             src={service.image}
             alt={service.title}
             class="w-full h-48 object-cover"
+            width="50" height="50"
           />
           <div class="p-8">
             <h3 class="text-2xl font-semibold mb-4">{service.title}</h3>

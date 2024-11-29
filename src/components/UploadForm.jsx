@@ -45,11 +45,11 @@ export default function UploadForm() {
   return (
     <section id="upload" className="py-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-16">Start Your Campaign</h2>
+        <h2 className="text-4xl font-bold text-center mb-16">Lancez votre campagne</h2>
         <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
           <div className="space-y-6">
             <div>
-              <label className="block text-sm font-medium mb-2">Name</label>
+              <label className="block text-sm font-medium mb-2">Nom</label>
               <input
                 type="text"
                 className="w-full px-4 py-2 border rounded-lg"
@@ -60,7 +60,7 @@ export default function UploadForm() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">Email</label>
+              <label className="block text-sm font-medium mb-2">E-mail</label>
               <input
                 type="email"
                 className="w-full px-4 py-2 border rounded-lg"
@@ -71,22 +71,22 @@ export default function UploadForm() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">Campaign Duration</label>
+              <label className="block text-sm font-medium mb-2">Durée de la campagne</label>
               <select
                 className="w-full px-4 py-2 border rounded-lg"
                 value={formData.duration}
                 onChange={e => setFormData({...formData, duration: e.target.value})}
                 required
               >
-                <option value="">Select duration</option>
-                <option value="7">7 days</option>
-                <option value="14">14 days</option>
-                <option value="30">30 days</option>
+                <option value="">Sélectionnez une durée</option>
+                <option value="7">7 jours</option>
+                <option value="14">14 jours</option>
+                <option value="30">30 jours</option>
               </select>
             </div>
 
             <div className="space-y-4">
-              <label className="block text-sm font-medium mb-2">Upload Content</label>
+              <label className="block text-sm font-medium mb-2">Télécharger le contenu</label>
               <div
                 className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-primary transition-colors"
                 onDragOver={handleDragOver}
@@ -119,13 +119,13 @@ export default function UploadForm() {
                     />
                   </svg>
                   <span className="text-gray-600">
-                    Drag & drop files here or click to select
+                    Glissez-déposez vos fichiers ici ou cliquez pour sélectionner
                   </span>
                 </label>
               </div>
               {formData.files.length > 0 && (
                 <div className="mt-4 bg-gray-50 p-4 rounded-lg">
-                  <p className="font-medium mb-2">Selected files:</p>
+                  <p className="font-medium mb-2">Fichiers sélectionnés:</p>
                   <ul className="space-y-2">
                     {formData.files.map((file, index) => (
                       <li key={index} className="flex items-center text-sm text-gray-600">
@@ -152,7 +152,7 @@ export default function UploadForm() {
               type="submit"
               className="w-full bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors"
             >
-              Submit Campaign
+              Soumettre la campagne
             </button>
           </div>
         </form>
